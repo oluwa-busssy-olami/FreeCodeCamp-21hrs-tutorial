@@ -358,15 +358,81 @@ class SmallestIntegerFinder {
 //callback Function
 function myCallback(someNumber) {
     return someNumber * 2;
-
 }
 
 function mainFunction(randomNumber, shouldCall, callBack) {
-    let result = randomNumber;
+    let result = randomNumber; // in this example result === 20
+    //in this example , shouldCell is 'true, so we do reach the callback 
     if (shouldCall) {
+        //in this example 'callback represent 'myCallBack' from above
         result = callBack(randomNumber);
     }
+    //since result we re-assigned by the callBack function return 40
     return result;
 }
 mainFunction(20, true, myCallback);
-3
+
+// callBack(20);
+
+// mainFunction(20, true, function(num){
+//     return num * 2;
+//   })
+//   40 
+//mainFunction(20, true, num => num *2)
+//mainFunction(20, true, (num) =>{
+//     return num * 2;
+// })
+// 40
+
+//CallBaack os needed becuase of reusablity;curious when connect a dot 
+
+const myArrayys = [2, 4, 6, 8];
+
+function myCustomMapOperationCallBack(itemFromArray) {
+    return itemFromArray * 2;
+}
+const newArray = myArrayys.map(myCustomMapOperationCallBack);
+//newArrays
+
+
+
+
+//Call back Function
+// const strArray = ['hello', 'world', 'my', 'name', 'is', 'zach'];
+// // undefined
+// // strArray
+// // Array(6) [ "hello", "world", "my", "name", "is", "zach" ]
+
+// strArray.map(itemFromArray =>itemFromArray[0]);
+// // Array(6) [ "h", "w", "m", "n", "i", "z" ]
+
+//Asyn are code that not run instantly7
+
+//JavaScript primitives; a primitive;(string, Number, booleans, symbol)is the simpleat form of something; used to build up data types
+//new Keyword is consider an operation
+//Everything is an object in
+const myDate = new Date();
+//the date object is a template and you hav to tak a copy of the template  and store it in a new variable
+
+//JavaScript date
+
+
+
+// const now =  new Date();
+// undefined
+// now
+// Date Sat Mar 04 2023 15:47:34 GMT+0100 (West Africa Standard Time)
+
+// //the number of millisecound that have elapsed since midnight on january 1, 1970, UTC
+// undefined
+// now.valueOf()
+// 1677941254899 
+
+const myDater = new Date()
+console.log(myDater);
+console.log(myDater.toString());
+console.log(myDater.toISOString());
+console.log(myDater.getDate());
+console.log(myDater.getMonth());
+console.log(myDater.getFullYear());
+console.log(myDater.getTimezoneOffset());
