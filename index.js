@@ -274,3 +274,99 @@ const greetStudent = 'Hello class';
 console.log(greetStudent.toUpperCase().split(" "));
 const greets = greetStudent.indexOf('CLASS')
 console.log(greets);
+
+//25 beginner pratice problem
+//Pratice problem 1
+
+function multiply(a, b) {
+    return a * b
+}
+
+//pratice 2 Complete the solution so that it reverses the string passed into it.
+
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
+
+function solution(str1, str2) {
+
+    const strs = str1.split("");
+    const reversed = strs.reverse();
+    const finalAnswer = reversed.join("");
+    return finalAnswer;
+
+    const strt = str2.split("");
+    const reverse = strt.reverse();
+    const finalAnswers = reverse.join("");
+    return finalAnswers;
+};
+
+
+
+
+
+// function solution(str){
+//   const array = str.split("");
+//   const reversed = arr.reverse();
+// const FinalAnswer = reversed.join("");
+
+//   return finalAnswer;
+//   }
+
+//Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+function evenOrOdd(number1) {
+    if (number1 % 2 === 0) {
+        return 'Even';
+    } else {
+        return '0dd';
+    }
+};
+
+// function even_or_odd(number) {
+//     return number % 2 ? "Odd" : "Even"
+//   }
+
+//Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
+//Can you help her?
+
+function greet(name) {
+    if (name === "Johnny")
+        return "Hello, my love!";
+    return "Hello, " + name + "!";
+}
+
+class SmallestIntegerFinder {
+    findSmallestInt(arrayOfNumbers) {
+
+        let smallestNumber;
+
+        for (let i = 0; i < arrayOfNumbers.lenght; i++) {
+
+            const individualNumber = arrayOfNumbers[i];
+
+            if (i === 0) {
+                smallestNumber = individualNumber;
+            }
+
+            if (individualNumber < smallestNumber) {
+                smallestNumber = individualNumber;
+            }
+        }
+        return smallestNumber;
+    }
+}
+
+//callback Function
+function myCallback(someNumber) {
+    return someNumber * 2;
+
+}
+
+function mainFunction(randomNumber, shouldCall, callBack) {
+    let result = randomNumber;
+    if (shouldCall) {
+        result = callBack(randomNumber);
+    }
+    return result;
+}
+mainFunction(20, true, myCallback);
+3
